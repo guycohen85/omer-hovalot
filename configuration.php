@@ -1,5 +1,6 @@
 <?php
-class JConfig {
+class JConfig
+{
 	public $offline = '0';
 	public $offline_message = '<p>האתר נמצא כעת בתחזוקה.<br />
 
@@ -15,7 +16,7 @@ class JConfig {
 	//public $user = 'omer12684_data';
 	//public $password = 'ag8JZhSwP';
 	public $user = 'root';
-	public $password = '';
+	public $password = '310120';
 	public $db = 'omer12684_data';
 	public $dbprefix = 'loo11_';
 	public $live_site = '';
