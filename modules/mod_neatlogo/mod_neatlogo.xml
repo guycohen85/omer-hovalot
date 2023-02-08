@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+	<name>{neat}logo</name>
+	<author>Mike Shtilerman</author>
+	<authorEmail>mikeinterface@gmail.com</authorEmail>
+	<version>1.3</version>
+	<description>A streamlined site logo module</description>
+	<files>
+		<filename>mod_neatlogo.xml</filename>
+		<filename module="mod_neatlogo">mod_neatlogo.php</filename>
+		<filename>index.html</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="Settings">
+				<field type="spacer" name="spacer1" class="nm-settingsSpacer" label="&lt;br /&gt;✱ Basic ✱&lt;hr /&gt;" />
+				<field name="imagePath" type="media" label="Logo image" directory="" description="Logo image to be dispalyed" />
+				<field name="imageTitle" type="text" size="57" label="Logo title" description="Logo image title (usually site's name)" />
+				<field name="imageAlt" type="text" size="57" label="Logo alt text" default="Logo" description="Logo image alt text (for SEO)" />
+				<field name="linkHome" type="radio" default="1" label="Link to homepage" description="Logo links to homepage">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="spacer" name="spacer2" class="nm-settingsSpacer" label="&lt;br /&gt;✱ Look and Feel ✱&lt;hr /&gt;" />
+				<field name="align" type="radio" default="inherit" label="Image alignment" description="Logo image alignment">
+					<option value="inherit">Inherit</option>
+					<option value="left">Left</option>
+					<option value="center">Center</option>
+					<option value="right">Right</option>
+				</field>
+				<field name="fade" type="radio" default="0" label="Fade on hover" description="Reduce logo opacity on hover">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="spacer" name="spacer3" class="nm-settingsSpacer" label="&lt;br /&gt;✱ Advanced ✱&lt;hr /&gt;" />
+				<field name="highZ" type="radio" default="0" label="Force high z-index" description="Add z-index: 999 to help maintain the on top of other elements">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

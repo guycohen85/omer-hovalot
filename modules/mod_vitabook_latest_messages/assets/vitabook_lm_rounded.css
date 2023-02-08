@@ -1,0 +1,11 @@
+/**
+ * @version     2.2.1
+ * @package     mod_vitabook_latest_messages
+ * @copyright   Copyright (C) 2012. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @author      JoomVita - http://www.joomvita.com
+ */
+ 
+div.vb_lm_messageUnpublished{-webkit border-radius:5px;-moz border-radius:5px;border-radius:5px;}
+div.vb_lm_messageUnactivated{-webkit border-radius:5px;-moz border-radius:5px;border-radius:5px;}
+div.vb_lm_message:hover{-webkit border-radius:5px;-moz border-radius:5px;border-radius:5px;}

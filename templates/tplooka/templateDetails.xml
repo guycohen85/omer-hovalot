@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
+<extension version="3" type="template" client="site">
+    <name>tplooka</name>
+    <version>3.0</version>
+    <creationDate>16-10-2013</creationDate>
+    <author>Thelet Pirsum</author>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <copyright>2011</copyright>
+    <license></license>
+	<description>Joomla 3.x template | כל הזכויות שמורות לתכלת פרסום בע"מ</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>params.ini</filename>
+		<filename>component.php</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>html/</folder>
+		<folder>css/</folder>
+		<folder>images/</folder>
+	</files>
+	<positions>
+		<position>_none_</position>
+		<position>logo</position>
+		<position>phone</position>
+		<position>social</position>
+		<position>phonesoc</position>
+		<position>menu</position>
+		<position>slideshow</position>
+		<position>sidebar</position>
+		<position>leftbar</position>
+		<position>slider</position>
+		<position>contactform</position>
+		<position>contactbox</position>
+		<position>news</position>
+		<position>content</position>
+		<position>footer</position>
+		<position>contact</position>
+		<position>contactinfo</position>
+		<position>rights</position>
+	</positions>
+</extension>

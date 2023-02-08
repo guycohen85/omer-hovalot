@@ -1,0 +1,19 @@
+/**
+ * @version     2.2.1
+ * @package     mod_vitabook_latest_messages
+ * @copyright   Copyright (C) 2012. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @author      JoomVita - http://www.joomvita.com
+ */
+ 
+div.vb_lm_latest-messages{margin:0;}
+div.vb_lm_message{width:100%;margin:0 0 10px 0;padding:2px;word-wrap:break-word;}
+div.vb_lm_messageUnpublished{background:#ffe7d7;}
+div.vb_lm_messageUnactivated{background:#FCF8E3;}
+div.vb_lm_message:hover{background-color:#eeeeee;}
+div.vb_lm_name{width:100%;font-weight:bold;color:black;}
+span.vb_lm_location{color:#aaaaaa;}
+div.vb_lm_text{width:100%;color:black;}
+div.vb_lm_date{width:100%;text-align:right;font-size:9px;color:#aaaaaa;}
+div.vb_lm_readmore{width:100%;margin-top:15px;text-align:right;}
+div.vb_lm_latest-messages a{text-decoration:none;}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Export - Google Merchant RSS XML Product Feed</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+    <description>Google Merchant RSS XML Product Feed. You mway want to link the generated XML from your Joomla template as well.</description>
+	<category_pairing_name>google</category_pairing_name>
+	<category_pairing_url></category_pairing_url>
+    <files>
+        <filename>google_rss.php</filename>
+    </files>
+	<element>google_rss</element>
+
+<params >
+   <param
+        type="text"
+        name="title"
+        id="title"
+        label="RSS Feed Title"
+        description="Google Merchant RSS Feed Title "
+        size="80"
+		default=""
+        maxLength="2550" />
+		
+		
+	  
+
+		   <param
+        type="text"
+        name="description"
+        id="description"
+        label="RSS Feed Description"
+        description="Google Merchant RSS Feed Description "
+        size="80"
+		default=""
+        maxLength="2550" />
+		
+		
+		 <param
+        type="text"
+        name="catlink"
+        id="catlink"
+        label="Category Taxonomy Link (change language suffix)"
+        description="Link to the Google categories. Change the language suffix and check if the file exists on the internet. Set en-GB instead of the {lang} variable."
+        size="80"
+		default="http://www.google.com/basepages/producttype/taxonomy.{lang}.txt"
+        maxLength="2550" />
+		
+
+</params>
+    
+    
+    
+
+</extension>

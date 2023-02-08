@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension	type="module" version="1.6.0" method="upgrade" client="site" >
+	<name>Unite Gallery</name>
+	<author>Unite CMS / Valiano</author>
+	<creationDate>August 2014</creationDate>
+	<copyright>Copyright (C) 2014 UniteCMS.net, All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>support@unitecms.net</authorEmail>
+	<authorUrl>http://unitegallery.net</authorUrl>
+	<version>1.4.5 b1</version>
+	<description><![CDATA[
+			Unite Gallery module. Put the slider on any page. All the slider configuration located in Component.</p>
+			<p>
+				For support please turn to <a href="http://unitecms.net/premium-extensions/unite-gallery-main/unite-gallery" target="_blank">Unite Gallery Page</a>
+			</p>
+			<small style="float:right">ver. 1.4.5 b1</small>
+     ]]>
+	 </description>
+	
+	<files>
+		<folder>fields</folder>	
+		<filename module="mod_unite_gallery">mod_unite_gallery.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_unite_gallery.xml</filename>
+	</files>
+	<config>
+	
+		<fields name="params" addfieldpath="/modules/mod_unite_gallery/fields">
+
+			<fieldset name="general" label="General Settings">
+				 <field name="galleryid"
+					type="gallery"
+					label="Gallery"
+					description="Choose a gallery from the component"
+				/>
+				 
+				 <field type="spacer" hr="true"></field>
+				 
+				 <field name="categoryid"
+					type="ugcategory"
+					label="Items Category"
+					description="Choose a gallery items category. If not selected, default category from the gallery settings will be set."
+				/>
+				
+			</fieldset>
+			
+			<fieldset name="advanced">
+					
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+					
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+				
+			</fieldset>
+			
+		</fields>		
+	</config>
+</extension>

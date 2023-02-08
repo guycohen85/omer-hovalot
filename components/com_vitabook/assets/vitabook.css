@@ -1,0 +1,152 @@
+/**
+ * @version     2.2.2
+ * @package     com_vitabook
+ * @copyright   Copyright (C) 2012. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @author      JoomVita - http://www.joomvita.com
+ */
+
+ /* General */
+.clr{
+    clear:both;
+}
+
+/* Message form */
+
+#jform_secureform{
+    display: none;
+}
+
+/* Avatar link */
+.vbAvatarLink{
+    float:right;
+}
+
+/* Post button */
+.vbPostButton{
+    float:right;
+}
+
+/* Intro text */
+.vbIntrotext {
+    word-wrap:break-word;
+    border:1px solid #DDDDDD;
+    margin-bottom:20px;
+}
+.vbIntrotext p {
+    padding:7px 5px 0 5px;
+}
+
+/* Messages */
+.vbMessage{
+    padding: 0px;
+    word-wrap: break-word;
+    border: 1px solid #DDDDDD;    
+    border-top: 1px solid #DDDDDD;
+    margin: 4px 0;
+}
+
+.vbMessageChildren > .vbMessage, .vbLoadMoreMessages > .vbMessage{
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    margin:0;
+}
+
+.vbMessageAvatar{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    margin-top: 0;
+}
+
+.vbMessageTitle{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 13px;
+}
+
+.vbMessageControls{
+    float: right;
+    padding: 5px;
+}
+
+.vbMessageControls img{
+    cursor: pointer;
+}
+
+.vbMessageLocation{
+    color:#AAAAAA;
+    font-weight:bold;
+}
+
+.vbMessageDate{
+    float: right;
+    margin-top: -5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    font-style: italic;
+    color: #AAAAAA;
+    font-size: smaller;
+}
+
+.vbMessageText{
+    overflow: hidden;
+    padding-right: 5px;
+}
+
+.vbMessageChildren{
+    width:89%;
+    margin-left:10%;
+    margin-right:1%;
+}
+
+.vbLoadMoreMessages{
+    width:100%;
+    cursor:pointer;
+    text-align: center;
+    margin: 0;
+    padding: 3px 0;
+}
+.vbLoadMoreMessages:hover{
+    background-color: #F0F0EE;
+}
+
+/* Avatar upload-form (squeezbox) */
+.vbAvatarContainer{
+    float:left;
+    width:100%;
+}
+
+.vbAvatarUpload{
+    float:left;
+    width:65%;
+}
+
+.vbAvatarCurrent{
+    float:left;
+    width:35%;
+}
+
+.vbAvatarCurrent img{
+    width:100px;
+    height:100px;
+}
+
+.avatar-button{
+    margin:50px 10px 0 0;
+}
+
+/* Smileys */
+.smiley {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* Show spinner besides form */
+#vbAjaxBusy {
+    margin-left: 5px;
+    display: none;
+}

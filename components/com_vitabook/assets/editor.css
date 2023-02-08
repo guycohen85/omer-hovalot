@@ -1,0 +1,37 @@
+/**
+ * @version     2.2.2
+ * @package     com_vitabook
+ * @copyright   Copyright (C) 2012. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @author      JoomVita - http://www.joomvita.com
+ */
+
+/** 
+ * When activated in the settings of VitaBoook, you can define custom styles for the VitaBook editor here.
+ * Two examples are given, which can be activated by uncommenting them below.
+ */
+
+
+/**
+ * Increase font-size in editor
+ */
+body, td, pre {
+    font-size:12px;
+}
+
+/**
+ * Display editor like normal textarea, by hiding the editor buttons. For Joomla < 3.2
+ */
+#jform_message_toolbargroup, .mceToolbar {
+    display:none;
+}
+.defaultSkin table.mceLayout {
+    background:white;
+} 
+
+/**
+ * Display editor like normal textarea, by hiding the editor buttons. For Joomla > 3.2
+ */
+#mce_16-body, #mce_22-body{
+    display:none;
+}

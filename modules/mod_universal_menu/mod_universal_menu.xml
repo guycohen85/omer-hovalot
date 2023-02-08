@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5.0"
+	client="site"
+	method="upgrade">
+	<name>Universal Menu</name>
+	<author>Alex Segal</author>
+	<creationDate>October 1</creationDate>
+	<version>1.10.1</version>
+	<description><![CDATA[
+	<div id="module_description">
+		<h3>Universal Menu Module <sup>v1.10.1</sup></h3>
+		<p>Helps to build Joomla!-based drop-down, accordion, mobile or responsive menu. Featured built-in VirtueMart support, RTL-ready CSS-styles, animation effects, rich backend configurations and more. Compatible with Joomla 1.6, 1.7, 2.5 and Joomla 3.x</p>
+	</div>
+	]]></description>
+	<files>
+		<filename module="mod_universal_menu">mod_universal_menu.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_universal_menu.xml</filename>
+		<folder module="mod_universal_menu">admin</folder>
+		<folder module="mod_universal_menu">assets</folder>
+		<folder module="mod_universal_menu">tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="menutype"
+					type="menu"
+					label="Select Menu"
+					description="Select a menu in the list." />
+					
+				<field
+					name="startLevel"
+					type="list"
+					default="1"
+					label="Start Level"
+					description="Level to start rendering the menu at. Setting the start and end levels to the same # and setting 'Show Sub-menu Items' to yes will only display that single level.">
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="endLevel"
+					type="list"
+					default="0"
+					label="End Level"
+					description="Level to stop rendering the menu at. If you choose 'All', all levels will be shown depending on 'Show Sub-menu Items' setting.">
+					<option value="0">JALL</option>
+					<option value="1">J1</option>
+					<option value="2">J2</option>
+					<option value="3">J3</option>
+					<option value="4">J4</option>
+					<option value="5">J5</option>
+					<option value="6">J6</option>
+					<option value="7">J7</option>
+					<option value="8">J8</option>
+					<option value="9">J9</option>
+					<option value="10">J10</option>
+				</field>
+
+				<field
+					name="showAllChildren"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="Show Sub-menu Items"
+					description="Expand the menu and make its sub-menu items always visible.">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field type="spacer" name="spacer1_1" label="&lt;b&gt;VirtueMart&lt;/b&gt;&lt;hr /&gt;" />
+				
+				<field
+					name="loadVMCategories"
+					class="btn-group local_switch_control"
+					type="radio"
+					default="0"
+					label="VirtueMart Subcategories"
+					description="Load sub-categories below the categories of VirtueMart.">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="showParentCategory"
+					type="list"
+					default="default"
+					label="Show Parent Category"
+					description="Show parent category of VirtueMart or hide it. By default module gets settings from the Menu Item Settings > Page Layout.">
+					<option 
+						value="default">JDEFAULT</option>
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field type="spacer" name="spacer1_2" label="&lt;b&gt;Style&lt;/b&gt;&lt;hr /&gt;" />
+				
+				<field
+					name="cssTheme"
+					type="list"
+					default="responsive"
+					label="CSS Theme"
+					description="The theme used for skinning the menu.">
+                    <option value="none">none</option>
+                    <option value="default">JDEFAULT</option>
+					<option value="accordion">Accordion</option>
+					<option value="horizontal">Horizontal</option>
+					<option value="mobile">Mobile</option>
+					<option value="responsive">Responsive</option>
+					<option value="vertical">Vertical</option>
+                </field>
+				
+				<field
+					name="imageTitlePosition"
+					type="list"
+					default="1"
+					label="Image Title Position"
+					description="Choose how to display image title, before or after the image.">
+					<option
+						value="0">Before</option>
+					<option
+						value="1">After</option>
+				</field>
+				
+				<field
+					name="arrowPosition"
+					type="list"
+					default="1"
+					label="Arrow Position"
+					description="Choose how to display subcategory arrow indicator, before or after item title.">
+					<option
+						value="none">none</option>
+					<option
+						value="0">Before</option>
+					<option
+						value="1">After</option>
+				</field>
+				
+				<field type="spacer" name="spacer1_3" label="&lt;b&gt;Mobile&lt;/b&gt;&lt;hr /&gt;" />
+				
+				<field
+					name="mobileMenuIcon"
+					class="btn-group local_switch_control"
+					type="radio"
+					default="0"
+					label="Mobile Menu Icon"
+					description="Enables menu icon ≡ (character 'identical to').">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="mobileMenuTitle"
+					type="text"
+					default=""
+					label="Mobile Menu Title"
+					description="Enter mobile menu title (for example MENU).">
+				</field>
+			</fieldset>	
+			
+			<fieldset name="javascript" label="JavaScript">            
+				<field
+					name="javascriptMenu"
+					class="btn-group main_switch_control"
+					type="radio"
+					default="1"
+					label="JavaScript Menu"
+					description="Enables javascript menu scripts.">
+					<option
+						value="0">JDISABLED</option>
+					<option
+						value="1">JENABLED</option>
+				</field>
+			
+				<field
+					name="animationEffect"
+					type="list"
+					default="slide"
+					label="Animation Effect"
+					description="The animation effect used for adding animation to a menu.">
+                    <option value="0">none</option>
+					<option value="fade">Fade</option>
+                    <option value="slide">Slide</option>
+                </field>
+				
+				<field
+					name="animationDuration"
+					type="text"
+					size="3"
+					filter="integer"
+					default="250"
+					label="Animation Duration (ms)"
+					description="Defines how long the animation will run (optimal value for fade and slide effects is 250, for accordion - 500).">
+				</field>
+				
+				<field
+					name="loadjQuery"
+					type="list"
+					default="auto"
+					label="Load jQuery?"
+					description="Whether to load the jQuery library (disable to prevent conflicts with other jQuery modules).">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+					<option
+						value="auto">Auto</option>						
+				</field>
+				
+				<field type="spacer" name="spacer2_1" label="&lt;b&gt;Menu Settings&lt;/b&gt;&lt;hr /&gt;" />
+				
+				<field
+					name="expandSubMenus"
+					type="list"
+					default="0"
+					label="Initial State"
+					description="Defines the initial state of the menu items: expand the menu or collapse it.">
+					<option
+						value="0">Collapse</option>
+					<option
+						value="1">Expand</option>
+				</field>
+				
+				<field
+					name="autoStretchMenu"
+					type="list"
+					default="0"
+					label="Auto-Stretch Menu"
+					description="Auto-stretch menu items evenly and fully across a menu's container.">
+                    <option
+						value="0">JDISABLED</option>
+					<option
+						value="1">Stretch only</option>
+					<option
+						value="2">Squeeze only</option>
+					<option						
+						value="3">Stretch and squeeze</option>
+                </field>
+				
+				<field
+					name="toggleOnHover"
+					class="btn-group"
+					type="radio"
+					default="0"
+					label="Toggle Effect on Hover"
+					description="Toggle just hovering the mouse pointer over a menu?">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="disableParentLink"
+					class="btn-group"
+					type="radio"
+					default="0"
+					label="Disable Parent Link"
+					description="Clicking parent links only toggles them, doesn't navigate to page.">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field type="spacer" name="spacer2_2" label="&lt;b&gt;Responsive&lt;/b&gt;&lt;hr /&gt;" />
+				
+				<field
+					name="responsiveMenu"
+					class="btn-group local_switch_control"
+					type="radio"
+					default="0"
+					label="Responsive Menu"
+					description="Whether to enable the responsive mobile menu.">
+					<option
+						value="0">JDISABLED</option>
+					<option
+						value="1">JENABLED</option>
+				</field>
+				
+				<field
+					name="mobileViewportSize"
+					type="text"
+					size="3"
+					filter="integer"
+					default="480"
+					label="Mobile Screen Size (px)"
+					description="Defines mobile viewport screen width.">
+				</field>
+			</fieldset>
+
+			<fieldset
+				name="advanced">
+				<field
+					name="tag_id"
+					type="text"
+					label="Menu Tag ID"
+					description="An ID attribute to assign to the root UL tag of the menu (optional)" />
+
+				<field
+					name="class_sfx"
+					type="text"
+					label="Menu Class Suffix"
+					description="A suffix to be applied to the CSS class of the menu items" />
+
+				<field
+					name="window_open"
+					type="text"
+					label="Target Position"
+					description="JavaScript values to position a popup window, e.g. top=50,left=50,width=200,height=300" />
+
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+					
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+				
+				<field
+					addfieldpath="/modules/mod_universal_menu/admin/formfield"
+					type="asset"
+					name="asset"
+					path="modules/mod_universal_menu/admin/" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,24 @@
+/* Horizontal UM v1.3.13 */
+.unim-icon.horizontal {display:none}
+ul.unim.horizontal > li {position:relative}
+html[dir="ltr"] ul.unim.horizontal > li {float:left}
+html[dir="rtl"] ul.unim.horizontal > li {float:right}
+	ul.unim.horizontal li a {display:block;letter-spacing:-.1px;padding:.5em 1em;transition:all .5s}
+	ul.unim.horizontal li img {vertical-align:middle;width:1em;height:1em}
+	/* arrows */
+	ul.unim.horizontal li i {display:inline-block;vertical-align:middle;background:url(arrows-horizontal-gray.png) no-repeat 0 0;width:16px;height:16px}
+	html[dir="ltr"] ul.unim.horizontal li i {background-position:0 -48px}
+	html[dir="rtl"] ul.unim.horizontal li i {background-position:0 -16px}
+		html ul.unim.horizontal li.opened > a > i {background-position:0 -32px}
+	/* sub-menus */
+	ul.unim.horizontal li.parent > ul {position:absolute;*left:0;*right:0;display:none;min-width:100%}
+		ul.unim.horizontal li li.parent {position:relative}
+		ul.unim.horizontal li li {width:100%}
+			ul.unim.horizontal li li a {text-align:start}
+				ul.unim.horizontal li li ul {position:absolute;top:0}
+				html[dir="ltr"] ul.unim.horizontal li li ul {left:100%}
+				html[dir="rtl"] ul.unim.horizontal li li ul {right:100%}
+	/* icon */
+	.unim-icon.horizontal.mobile {display:block !important;line-height:30px;padding:0 .8em}
+		.unim-icon.horizontal.mobile > * {display:inline-block;vertical-align:top}
+			.unim-icon.horizontal.mobile span {font-size:2.3em;line-height:.8em}

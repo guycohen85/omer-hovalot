@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>Počítání konverzí - Zbozi.cz</name>
+    <creationDate>srpen 2014</creationDate>
+    <author>Jakub Krupař</author>
+	<copyright>(C) Jakub Krupař</copyright>
+    <version>1.0.0</version>
+    <description><![CDATA[Počítání konverzí www.zbozi.cz: src="http://www.zbozi.cz/action/TOTO ČÍSLO/conversion?chsum=-TENTO KÓD=="]]></description>
+    <files>
+        <filename>zbozi_cz.php</filename>
+    </files>
+
+<params>
+		<param
+        type="text"
+        name="zbozi_kod"
+        id="zbozi_kod"
+        label="Kód z URL adresy"
+        description="Jedná se o 21 místný kód mezi znaky - a = v url odkazu na sledování"
+        size="80"
+		default="XVw9LxleERfBeF6Z9jzWw"
+        maxLength="255" />
+        
+        <param
+        type="text"
+        name="zbozi_cislo"
+        id="zbozi_cislo"
+        label="Číslo z URL adresy"
+        description="Jedná se o čísla mezi posledními zpětnými lomítky v url odkazu na sledování"
+        size="80"
+		default="12345"
+        maxLength="255" />
+	
+    
+</params>	
+</extension>

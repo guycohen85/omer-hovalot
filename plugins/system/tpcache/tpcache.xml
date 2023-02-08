@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="plugin" group="system" method="upgrade">
+	<name>TP Cache Plugin</name>
+	<author>Alex Segal</author>
+	<creationDate>April 2015</creationDate>
+	<copyright>Copyright (C) 2015 Thelet Pirsum. All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>elizovsky@gmail.com</authorEmail>
+	<authorUrl>http://www.tpirsum.co.il</authorUrl>
+	<version>1.4.14</version>
+	<description><![CDATA[
+	<h3>TP Cache Plug-in v1.4.14</h3>
+	<p>Provides page caching maintenance via a "Quick Icon" link in your Joomla! Administrator. Moreover, with "Smart Auto Clean" option enabled, the plugin can perform global check-in and clean up your cache automatically.</p>
+	<hr clear="both" />
+	<h4>Features</h4>
+	<ul class="unstyled">
+		<li><i class="icon-ok"></i>Easy and friendly back-end administration.</li>
+		<li><i class="icon-ok"></i>Full compatibility with Joomla 1.6, 1.7, 2.5 and Joomla 3.x</li>
+		<li><i class="icon-ok"></i>Option to place HTML link element with the hreflang tag in page header.</li>
+		<li><i class="icon-ok"></i>Option to remove unnecessary tabs and white-spaces from HTML source code.</li>
+		<li><i class="icon-ok"></i>Option to move all scripts to the bottom of the page just before the closing BODY tag.</li>
+		<li><i class="icon-ok"></i>Page caching maintenance, global check-in and temp folder clean up via a "Quick Icon".</li>
+		<li><i class="icon-ok"></i>Smart auto clean is triggered when you save an article or other item in the back-end and even when you update files of the template.</li>
+		<li><i class="icon-ok"></i>Option to redirect from a temporary address like IP-host/~account to permanent www.domain.name</li>
+		<li><i class="icon-ok"></i>Option to disable loading Bootstrap, jQuery and Mootools libraries in site front-end. It will help to save bandwidth and increase loading speed of your Joomla site.</li>
+		<li><i class="icon-ok"></i>Advanced browser caching will set cache-control header and allow page caching in the browser (thanks to HTTP ETag).</li>
+		<li><i class="icon-ok"></i>Plugin allows to combine multiple external JavaScript and CSS files into one large file (this function is experimental).</li>
+	</ul>
+	<hr clear="both" />
+	Copyright (C) 2015 <a href="//www.tpirsum.co.il" target="_blank">Thelet Pirsum</a>
+	<p><br /></p>
+	<style>#description li,#j-main-container li{list-style:none;padding:2px} #description li .icon-ok,#j-main-container li .icon-ok{padding:0 8px}</style>
+	]]></description>
+	<scriptfile>script.install.php</scriptfile>
+	<files>
+		<folder plugin="tpcache">lib</folder>
+		<filename plugin="tpcache">helper.php</filename>
+		<filename plugin="tpcache">tpcache.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field	name="pagecaching" type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="Provides page caching. Only caches pages for guest visitors (not for logged in users)"
+					label="Page Caching">
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
+
+                <field	name="hreflangtag" type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="The hreflang tag tells Google which language you are using on a specific page, so the search engine can serve that result to users searching in that language"
+					label="Hreflang Tag">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+                <field	name="htmlcompress" type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="Remove unnecessary tabs and white-spaces from HTML source code"
+					label="Compress HTML">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field	name="scriptsdown" type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="All scripts are moved to the bottom of the page just before the closing BODY tag"
+					label="Move Scripts Down">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field	name="spacer1_1" type="spacer"
+					label="&lt;hr /&gt;" />
+
+				<field	name="autoclean" type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="Enables smart auto-clean option. Auto clean is triggered when you save an article or other item in the back-end and even when you update the template files"
+					label="Smart Auto Clean">
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
+
+				<field	name="autocheckin" type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="Performs global check-in when smart auto-clean option is enabled"
+					label="Global Check-In">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field	name="quickicon" type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					description="Quick link will clean all cache and the temp folder by simply clicking on it"
+					label="Display Quick Icon">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="extfilter"
+					type="text"
+					default="less, php, xml"
+					label="Extensions Filter"
+					description="Comma-separated list of file extensions used by Smart Auto Clean listener (which controls modification date of the template files)" />
+
+				<field	name="spacer1_2" type="spacer"
+					label="&lt;hr /&gt;" />
+
+				<field	name="redirection" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="Redirect IP address to domain name where it possible (domain name considered temporary when contain 'dummy.', 'example.' or 'temp.')"
+					label="IP Redirection">
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field	name="unloadbootstrap" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="Disable loading Twitter Bootstrap framework"
+					label="Disable Bootstrap">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field	name="unloadjquery" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="Disable loading built-in jQuery library"
+					label="Disable jQuery">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field	name="unloadmootools" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="Disable loading Mootools library"
+					label="Disable Mootools">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field	name="spacer2_1" type="spacer"
+					label="&lt;hr /&gt;" />
+
+				<field	name="browsercache" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="If yes, use mechanism for storing page cache in the visitor's browser (HTTP ETag)"
+					label="Use Browser Caching">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field	name="combinecss" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="Combine external CSS files into a single file"
+					label="Combine CSS Styles">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field	name="combinejs" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="Combine multiple JavaScript files into one"
+					label="Combine JS Scripts">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field	name="spacer2_2" type="spacer"
+					label="&lt;hr /&gt;" />
+
+				<field	name="debugging" type="radio"
+					class="btn-group btn-group-yesno"
+					default="0"
+					description="Enables website front-end debug messages"
+					label="Debug Messages">
+					<option value="1">JENABLED</option>
+					<option value="0">JDISABLED</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

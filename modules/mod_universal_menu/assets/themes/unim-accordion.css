@@ -1,0 +1,19 @@
+/* ACCORDION UM v1.7.23 */
+.unim,.unim ul {list-style:none;margin:0;padding:0;}
+ul.unim.accordion li {float:none}
+	ul.unim.accordion li a {display:block;padding:.5em 1em;text-align:start;transition:.5s}
+	ul.unim.accordion li img {vertical-align:middle;width:1em;height:1em}
+	/* arrows */
+	ul.unim.accordion li i {display:inline-block;vertical-align:middle;background:url(arrows-vertical.png) no-repeat 0 0;width:16px;height:16px}
+	html[dir="ltr"] ul.unim.accordion li i {background-position:0 -48px}
+	html[dir="rtl"] ul.unim.accordion li i {background-position:0 -16px}
+		html ul.unim.accordion li.opened > a > i {background-position:0 -32px}
+	/* sub-menus */
+	ul.unim.accordion li ul {display:none}
+	html[dir="ltr"] ul.unim.accordion li.parent ul {margin-left:1em}
+	html[dir="rtl"] ul.unim.accordion li.parent ul {margin-right:1em}
+	/* icon */
+	.unim-icon.accordion {display:none}
+	.unim-icon.accordion.mobile {display:block;line-height:30px;padding:0 .8em}
+		.unim-icon.accordion.mobile > * {display:inline-block;vertical-align:top}
+			.unim-icon.accordion.mobile span {font-size:2.3em;line-height:.8em}

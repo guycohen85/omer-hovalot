@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="1.5" type="package" group="opctracking" method="upgrade" >	
+    <name>OPC Export - Heureka.sk</name>
+    <creationDate>Oct 2013</creationDate>
+    <author>RuposTel.com</author>
+	<copyright>(C) 2013 RuposTel.com</copyright>
+    <authorUrl>http://www.rupostel.com</authorUrl>
+    <version>1.0.0</version>
+    <description>Heureka.sk Export</description>
+	<category_pairing_name>heureka</category_pairing_name>
+	<category_pairing_url>http://www.heureka.sk/direct/xml-export/shops/heureka-sekce.xml</category_pairing_url>
+    <files>
+        <filename>heureka.php</filename>
+    </files>
+	<element>heureka</element>
+
+<params >
+</params>
+    
+    
+    
+
+</extension>

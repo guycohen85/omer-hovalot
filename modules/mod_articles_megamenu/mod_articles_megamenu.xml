@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.2"
+	client="site"
+	method="upgrade">
+	<name>Articles Megamenu AKA Newsflash II</name>
+	<author>Alex Segal</author>
+	<creationDate>June 2014</creationDate>
+	<version>1.6.2</version>
+	<description><![CDATA[The <b>Articles Megamenu Module</b> (Newsflash II) will display a fixed number of articles from a specific category.]]></description>
+	<files>
+		<filename module="mod_articles_megamenu">mod_articles_megamenu.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_articles_megamenu.xml</filename>
+		<folder module="mod_articles_megamenu">admin</folder>
+		<folder module="mod_articles_megamenu">tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="catid"
+					type="category"
+					extension="com_content"
+					multiple="true"
+					default=""
+					size="10"
+					label="Category"
+					description="Select Articles from a specific Category or a set of Categories. If no selection will show all categories as default." >
+					<option value="">- All Categories -</option>
+				</field>
+				
+				<field
+					name="ordering"
+					type="list"
+					default="a.ordering"
+					label="Order Results"
+					description="Select the order in which you want query results presented.">
+					<option
+						value="a.publish_up">Published Date</option>
+					<option
+						value="a.created">Created Date</option>
+					<option
+						value="a.ordering">Ordering</option>
+					<option
+						value="a.hits">Hits</option>						
+					<option
+						value="rand()">Random</option>
+				</field>
+
+				<field
+					name="direction"
+					type="list"
+					default="1"
+					label="Direction"
+					description="Sort order. Descending is highest to lowest. Ascending is lowest to highest.">
+					<option
+						value="0">Ascending</option>
+					<option
+						value="1">Descending</option>
+				</field>
+				
+				<field
+					name="count"
+					type="text"
+					size="3"
+					filter="integer"
+					default="5"
+					label="Number of Articles"
+					description="The number of Articles to display within this module." />
+
+				<field type="spacer" name="spacer1_1" label="&lt;b&gt;Titles&lt;/b&gt;&lt;hr /&gt;" />
+
+				<field
+					name="item_title"
+					class="btn-group local_switch_control"
+					type="radio"
+					default="1"
+					label="Show Article title"
+					description="Show/hide Article title">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+
+				<field
+					name="link_titles"
+					type="list"
+					label="Linked Titles"
+					description="Link the Article titles to Articles.">
+					<option
+						value="">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="item_heading"
+					type="list"
+					default="h3"
+					label="Header Level"
+					description="Select the desired HTML header level for the Article titles.">
+					<option
+						value="h1">JH1</option>
+					<option
+						value="h2">JH2</option>
+					<option
+						value="h3">JH3</option>
+					<option
+						value="h4">JH4</option>
+					<option
+						value="h5">JH5</option>
+				</field>
+
+				<field type="spacer" name="spacer1_2" label="&lt;b&gt;Images&lt;/b&gt;&lt;hr /&gt;" />
+
+				<field
+					name="intro_images"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="Show Intro Images"
+					description="Display Article intro images">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field
+					name="image"
+					class="btn-group"
+					type="radio"
+					default="1"
+					label="Show Images"
+					description="Display Article images">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+				
+				<field type="spacer" name="spacer1_3" label="&lt;b&gt;HTML Settings&lt;/b&gt;&lt;hr /&gt;" />
+				
+				<field
+					name="listing_tags"
+					type="list"
+					default="div-div"
+					label="Listing Tags"
+					description="Select the desired HTML markup for the Article items.">
+					<option
+						value="ul-li">ul > li</option>
+					<option
+						value="div-div">div > div</option>
+					<option
+						value="div-span">div > span</option>
+					<option
+						value="div-section">div > section</option>
+				</field>
+
+				<field
+					name="readmore"
+					type="list"
+					default="1"
+					label="'Read more...' Link"
+					description="If set to Show, the 'Read more...' link will show if Main text has been provided for an Article.">
+					<option
+						value="0">JHIDE</option>
+					<option
+						value="1">JSHOW</option>
+				</field>
+				
+				<field
+					name="showLastSeparator"
+					class="btn-group"
+					type="radio"
+					default="0"
+					label="Show last separator"
+					description="Show separator after last Article">
+					<option
+						value="0">JNO</option>
+					<option
+						value="1">JYES</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+				
+				<field
+					addfieldpath="/modules/mod_articles_megamenu/admin/formfield"
+					type="asset"
+					name="asset"
+					path="modules/mod_articles_megamenu/admin/" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,17 @@
+/* DEFAULT UM v1.7.23 */
+.unim,.unim ul {list-style:none;margin:0;padding:0;}
+ul.unim.default > li {position:relative}
+html[dir="ltr"] ul.unim.default > li {float:left}
+html[dir="rtl"] ul.unim.default > li {float:right}
+	ul.unim.default li a {display:block}
+	ul.unim.default li i {display:none}
+	/* sub-menus */
+	ul.unim.default li.parent > ul {position:absolute;*left:0;*right:0;display:none}
+		ul.unim.default li li.parent {position:relative}
+		ul.unim.default li li {margin:0}
+			ul.unim.default li li a {text-align:start}
+				ul.unim.default li li ul {position:absolute;top:0}
+				html[dir="ltr"] ul.unim.default li li ul {left:100%}
+				html[dir="rtl"] ul.unim.default li li ul {right:100%}
+	/* icon */
+	.unim-icon.default {display:none}

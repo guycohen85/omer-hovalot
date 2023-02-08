@@ -1,0 +1,35 @@
+/* Admin v1.3.2 */
+/* panel */
+.pane-sliders .panel { border: 1px solid #cacaca !important; border-top: 2px solid #146295 !important; border-radius: 5px 5px 5px 5px; margin-bottom: 3px; padding: 0 1px; }
+	.pane-sliders .panel h3 { line-height: 37px; height: 37px; background: linear-gradient(to top, #eee, #f9f9f9) repeat scroll 0 0 #f6f6f6 !important; padding: 0; }
+		.pane-sliders .panel h3:hover { background: linear-gradient(to top, #f3f3f3, #fcfcfc) repeat scroll 0 0 #f9f9f9 !important; }
+	.pane-sliders .panel h3 span{ color: #146295; text-transform: uppercase; }
+
+/* arrows */
+.pane-toggler-down { border-bottom-color: #eee !important; }
+	.pane-toggler-down span { background: url(../images/arrow-down.png) no-repeat scroll 8px 50% transparent !important; padding-left: 26px !important; }
+	.pane-toggler span { background: url(../images/arrow-up.png) no-repeat scroll 10px 50% transparent !important; padding-left: 26px!important; }
+
+/* sliders&fields */	
+fieldset.panelform { margin-bottom: 0; padding: 10px !important; }
+#module-sliders .spacer h3 { margin: 0; padding-top: 3px; background: #fff !important; }
+#module-sliders .adminform { padding: 0; }
+	#module-sliders fieldset > ul > li { border-bottom: 1px dotted  #ccc; min-height: 34px; margin: 5px; padding: 0; }
+	#module-sliders fieldset > ul > li label { color: #4c4c4c; font-size: 11px; font-weight: bold; line-height: 18px; text-align: left; max-width: 27% !important; min-width: 27% !important; height: 29px; }
+		#module-sliders fieldset > ul > li > label { max-width: 36% !important; min-width: 36% !important; }
+
+/* spacer */
+#module-sliders li > .spacer label { color: #999; line-height: 0; text-align: left; }
+	#module-sliders li > .spacer label > * { float: left; display: block; font-size: 14px; font-weight: normal; margin: 8px 0 0; }
+	#module-sliders li > .spacer hr { float: none; background: none repeat scroll 0 0 #eee; border: 1px solid #ccc; border-radius: 0 1em 0 0; box-sizing: border-box; width: 90%; height: 6px; margin: 24px 0 0; }
+
+/* fix chosen */
+#module-sliders .chzn-container  ul.chzn-results { min-width:95%; }
+	#module-sliders .chzn-container-single .chzn-single div { height:100%!important; }
+	#module-sliders fieldset.adminform fieldset.radio, #module-sliders fieldset.panelform fieldset.radio, #module-sliders fieldset.adminform-legacy fieldset.radio { float: left; border: 0 none; max-width: 62% !important; min-width: 62% !important; height: 30px; margin: 0 0 5px; padding: 0; }
+	#module-sliders input[type=text], #module-sliders textarea { font-family: sans-serif; font-size: 11px; background:-moz-linear-gradient(center bottom , white 85%, #EEEEEE 99%) repeat scroll 0 0 transparent; border: 1px solid #aaaaaa; border-radius: 4px;
+    margin: 1px 0; padding: 6px 20px 6px 5px; outline: 0 none; }
+
+/* switcher */
+.switcher-yes, .switcher-no, .switcher-on, .switcher-off { float: left; background: url(../images/switcher-onoff.png) no-repeat scroll 0 0 transparent; width: 60px; height: 22px; margin-top: 3px; cursor: pointer; }
+	.switcher-no, .switcher-off { background-position: 0 -22px; }

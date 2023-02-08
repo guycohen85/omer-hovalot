@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>COM_VITABOOK</name>
+	<creationDate>2014-06-17</creationDate>
+	<copyright>Copyright (C) 2012. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later.</license>
+    <author>JoomVita</author>
+	<authorEmail>info@joomvita.com</authorEmail>
+	<authorUrl>http://joomvita.com</authorUrl>
+	<version>2.2.2</version>
+	<description>COM_VITABOOK_XML_DESCRIPTION</description>
+
+	<install> <!-- Runs on install -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+  		</sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+  		</sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+	<!-- Runs on install/uninstall/update; New in 2.5 -->
+	<scriptfile>script.php</scriptfile>
+
+	<files folder="site">
+        <folder>assets</folder>
+		<filename>controller.php</filename>
+		<folder>controllers</folder>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>vitabook.php</filename>
+		<filename>router.php</filename>
+	</files>
+
+    <media destination="com_vitabook" folder="media">
+		<folder>images</folder>
+	</media>
+
+	<administration>
+		<menu>COM_VITABOOK</menu>
+		<submenu>
+			<menu link="option=com_vitabook&amp;view=messages" view="messages" img="class:messages" alt="Vitabook/Messages">COM_VITABOOK_MESSAGES</menu>
+        </submenu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<folder>assets</folder>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<filename>index.html</filename>
+            <folder>language</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<filename>vitabook.php</filename>
+		</files>
+	</administration>
+
+	<!-- UPDATESERVER DEFINITION -->
+	<updateservers>
+		<server type="extension" priority="1" name="VitaBook Update Server">http://update.joomvita.com/vitabook-update.xml</server>
+	</updateservers>
+
+</extension>

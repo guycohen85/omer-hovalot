@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" method="upgrade">
+    <name>MOD_VITABOOK_LATEST_MESSAGES</name>
+    <version>2.2.1</version>
+    <license>GNU General Public License version 2 or later.</license>
+    <author>JoomVita</author>
+    <authorEmail>info@joomvita.com</authorEmail>
+    <authorUrl>http://joomvita.com</authorUrl>
+    <copyright>Copyright (C) 2012. All rights reserved.</copyright>
+    <creationDate>2013-08-02</creationDate>
+    <description>MOD_VITABOOK_LATEST_MESSAGES_DESC</description>
+
+    <files>
+        <filename module="mod_vitabook_latest_messages">mod_vitabook_latest_messages.php</filename>
+        <filename module="mod_vitabook_latest_messages">helper.php</filename>
+        <filename module="mod_vitabook_latest_messages">index.html</filename>
+        <folder>assets</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+    </files>
+
+    <config>
+        <fields name="params">
+	    <fieldset name="basic" addfieldpath="/administrator/components/com_vitabook/models/fields">
+		<field name="number" type="text" default="2" label="MOD_VITABOOK_LM_NUMBER" description="MOD_VITABOOK_LM_NUMBER_DESC" />
+		<field name="length" type="text" default="0" label="MOD_VITABOOK_LM_LENGTH" description="MOD_VITABOOK_LM_LENGTH_DESC" />
+        <field name="replies" type="radio" default="1" label="MOD_VITABOOK_LM_REPLIES" description="MOD_VITABOOK_LM_REPLIES_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="messagelink" type="radio" default="1" label="MOD_VITABOOK_LM_MESSAGELINK" description="MOD_VITABOOK_LM_MESSAGELINK_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="showdate" type="radio" default="1" label="MOD_VITABOOK_LM_SHOWDATE" description="MOD_VITABOOK_LM_SHOWDATE_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="showlocation" type="radio" default="0" label="MOD_VITABOOK_LM_SHOWLOCATION" description="MOD_VITABOOK_LM_SHOWLOCATION_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="readmore" type="radio" default="0" label="MOD_VITABOOK_LM_READMORE" description="MOD_VITABOOK_LM_READMORE_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>        
+        
+        <field type="spacer" label="MOD_VITABOOK_SETTINGS_LAYOUT" description="MOD_VITABOOK_SETTINGS_LAYOUT_DESC" />
+        
+        <field name="rounded" type="radio" default="1" label="MOD_VITABOOK_LM_ROUNDED" description="MOD_VITABOOK_LM_ROUNDED_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+		<field name="name_color"
+			type="vitabookColor"
+			default=""
+			label="MOD_VITABOOK_LM_NAME_COLOR"
+			size="10"
+		/>
+		<field name="message_color"
+			type="vitabookColor"
+			default=""
+			label="MOD_VITABOOK_LM_MESSAGE_COLOR"
+			size="10"
+		/>
+		<field name="date_color"
+			type="vitabookColor"
+			default=""
+			label="MOD_VITABOOK_LM_DATE_COLOR"
+			size="10"
+		/>
+		<field name="background_color"
+			type="vitabookColor"
+			default=""
+			label="MOD_VITABOOK_LM_BACKGROUND_COLOR"
+			size="10"
+		/>
+        
+        <field type="spacer" label="" />
+        
+		<field name="moduleclass_sfx" type="text" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+	    </fieldset>
+        </fields>
+    </config>
+
+	<!-- UPDATESERVER DEFINITION -->
+	<updateservers>
+		<server type="extension" priority="1" name="VitaBook Update Server">http://update.joomvita.com/vitabook-LM-module-update.xml</server>
+	</updateservers>
+</extension>

@@ -1,0 +1,47 @@
+<?php
+/**
+ * @version     1.0
+ * @package     com_vitabook
+ * @copyright   Copyright (C) 2012. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @author      JoomVita - http://www.joomvita.com
+ */
+ ?>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Vitabook Emoticons</title>
+    <?php // Link from the com_vitabook/assets/vitabookemoticons folder ?>
+	<script type="text/javascript" src="../../../../../../media/editors/tinymce/jscripts/tiny_mce/tiny_mce_popup.js"></script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="4">
+	<tr>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_sleep.gif');" src="img/smilies/sm_sleep.gif" title=":zzz" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_upset.gif');" src="img/smilies/sm_upset.gif" title=":@" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_wink.gif');" src="img/smilies/sm_wink.gif" title=";)" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_cool.gif');" src="img/smilies/sm_cool.gif" title=":8" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_razz.gif');" src="img/smilies/sm_razz.gif" title=":P" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_rolleyes.gif');" src="img/smilies/sm_rolleyes.gif" title=":roll" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_bigeek.gif');" src="img/smilies/sm_bigeek.gif" title=":eek" /></td>
+	</tr>
+	<tr>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_biggrin.gif');" src="img/smilies/sm_biggrin.gif" title=":D" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_smile.gif');" src="img/smilies/sm_smile.gif" title=":)" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_sigh.gif');" src="img/smilies/sm_sigh.gif" title=":sigh" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_confused.gif');" src="img/smilies/sm_confused.gif" title=":?" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_cry.gif');" src="img/smilies/sm_cry.gif" title=";(" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_mad.gif');" src="img/smilies/sm_mad.gif" title=":(" /></td>
+		<td><img onmouseover="this.style.cursor='pointer';" onclick="insertEmoticon('sm_dead.gif');" src="img/smilies/sm_dead.gif" title=":x" /></td>
+	</tr>
+</table>
+<script type="text/javascript">
+	function insertEmoticon(smiley) {
+		var smiley = tinyMCEPopup.getWindowArg('plugin_url') + '/img/smilies/' + smiley;
+		tinyMCEPopup.execCommand('mceInsertContent', false, '<img src="' + smiley + '" alt="" border="0" class="smiley" />');
+		tinyMCEPopup.close();
+	}
+</script>
+
+</body>
+</html>

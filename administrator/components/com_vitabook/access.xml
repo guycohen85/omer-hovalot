@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_vitabook">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="vitabook.create.new" title="COM_VITABOOK_EDITOR_JACTION_CREATE_NEW" description="COM_VITABOOK_EDITOR_JACTION_CREATE_NEW_DESC" />
+        <action name="vitabook.create.reply" title="COM_VITABOOK_EDITOR_JACTION_CREATE_REPLY" description="COM_VITABOOK_EDITOR_JACTION_CREATE_REPLY_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="vitabook.insert.video" title="COM_VITABOOK_EDITOR_JACTION_INSERT_VIDEO" description="COM_VITABOOK_EDITOR_JACTION_INSERT_VIDEO_DESC" />
+		<action name="vitabook.insert.image" title="COM_VITABOOK_EDITOR_JACTION_INSERT_IMAGE" description="COM_VITABOOK_EDITOR_JACTION_INSERT_IMAGE_DESC" />
+		<action name="vitabook.upload.image" title="COM_VITABOOK_EDITOR_JACTION_UPLOAD" description="COM_VITABOOK_EDITOR_JACTION_UPLOAD_DESC" />
+	</section>
+</access>

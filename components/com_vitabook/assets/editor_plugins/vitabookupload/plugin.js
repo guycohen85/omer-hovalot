@@ -1,0 +1,1 @@
+tinymce.PluginManager.add("vitabookupload",function(e,t){function r(){win=e.windowManager.open({url:n,width:500,height:360,title:"VitaBook"})}var n="?option=com_vitabook&task=editor.showVitabookUpload";if($("vitabookMessageForm")===null)n="../"+n;e.addButton("vitabookupload",{tooltip:"Insert image",onclick:r,icon:"image"})})

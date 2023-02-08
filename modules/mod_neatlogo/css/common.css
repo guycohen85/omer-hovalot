@@ -1,0 +1,6 @@
+.neatlogo { }
+	.neatlogo.left { text-align: left; }
+	.neatlogo.center { text-align: center; }
+	.neatlogo.right { text-align: right; }
+	.neatlogo img.nl-image { max-width: 100%; height: auto; transition: opacity .5s; }
+		.neatlogo.fade img.nl-image:hover { opacity: .75; transition: opacity .5s; }

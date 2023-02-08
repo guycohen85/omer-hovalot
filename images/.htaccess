@@ -1,0 +1,9 @@
+Order Allow,Deny
+
+Deny from all
+
+<Files ~ "\.(bmp|css|csv|doc|gif|html|jpg|jpeg|js|pdf|png|ppt|psd|swf|tiff|txt|xls|BMP|CSS|CSV|DOC|GIF|HTML|JPG|JPEG|JS|PDF|PNG|PPT|PSD|SWF|TIFF|TXT|XLS|mp3|MP3)$">
+
+Allow from all
+
+</Files>

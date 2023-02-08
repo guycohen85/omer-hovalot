@@ -1,0 +1,27 @@
+/* Forms */
+
+fieldset{background:#ffffff;}
+
+/* Buttons */
+button.upload-button,button.close-button, #cancel, input.button, .updateButton {
+border:0; margin:0; padding:0;
+font-weight:bold;
+font-size:10px;
+width:94px; height:26px;
+background:url(img/buttons.png) 0 -26px;
+cursor:pointer;
+padding-bottom:2px;
+float:left;
+}
+
+button.upload-button {background:url(../img/buttons.png) 0 -52px}
+button.close-button {background:url(img/buttons.png) 0 0; float:right}
+
+#upload_process{
+margin:0px;
+padding:0px;
+}
+
+.panel_wrapper h2 {
+	margin-bottom:10px;
+}

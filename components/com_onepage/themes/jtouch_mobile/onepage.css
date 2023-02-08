@@ -1,0 +1,54 @@
+#addToHomeScreen {
+  display: none !important; 
+}
+
+#vmMainPageOPC #opc_basket span.ui-icon {
+ 
+}
+
+#vmMainPageOPC .totals, #vmMainPageOPC .op_col7  {
+ text-align: right; 
+}
+
+#vmMainPageOPC .mobile_basket {
+ padding-left: 0; 
+ padding-right: 0; 
+}
+#vmMainPageOPC .product_row {
+ border-right: none; 
+ border-left: none; 
+ padding-right: 0; 
+}
+
+#vmMainPageOPC div.totals div.ui-block-a {
+ display: none; 
+}
+
+#vmMainPageOPC div.totals div.ui-block-b {
+ width: 66.6%; 
+}
+
+#vmMainPageOPC div#payment_html br, #vmMainPageOPC div#ajaxshipping br {
+ display: none; 
+}
+
+@media (max-width: 579px) { 
+ div.opc_unit_price_column {
+  display: none; 
+ } 
+ 
+#vmMainPageOPC div.mobile_basket div.ui-block-a,#vmMainPageOPC div.mobile_basket div.ui-block-c,#vmMainPageOPC div.mobile_basket div.ui-block-d {
+ width: 33.3%; 
+} 
+
+div.shipto_wrapper {
+ clear: both; 
+}
+div.hidden_unit_price {
+ display: block; 
+ clear: both; 
+}
+div.stepper {
+ overflow: visible; 
+}
+}

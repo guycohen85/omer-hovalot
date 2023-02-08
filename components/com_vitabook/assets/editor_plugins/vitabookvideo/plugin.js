@@ -1,0 +1,1 @@
+tinymce.PluginManager.add("vitabookvideo",function(e,t){function r(){win=e.windowManager.open({url:n,width:500,height:200,title:"VitaBook"})}var n="?option=com_vitabook&task=editor.showVitabookVideo";if($("vitabookMessageForm")===null)n="../"+n;e.addButton("vitabookvideo",{tooltip:"Insert video",onclick:r,icon:"media"})})

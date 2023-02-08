@@ -1,0 +1,32 @@
+/* Responsive UM v1.3.13 */
+.unim-icon.responsive {display:none}
+ul.unim.responsive > li {position:relative}
+html[dir="ltr"] ul.unim.responsive > li {float:left}
+html[dir="rtl"] ul.unim.responsive > li {float:right}
+	ul.unim.responsive li a {display:block;letter-spacing:-.1px;padding:.5em 1em;transition:all .5s}
+	ul.unim.responsive li img {vertical-align:middle;width:1em;height:1em}
+	/* arrows */
+	ul.unim.responsive li i {display:inline-block;vertical-align:middle;background:url(arrows-horizontal.png) no-repeat 0 0;width:16px;height:16px}
+	html[dir="ltr"] ul.unim.responsive li i {background-position:0 -48px}
+	html[dir="rtl"] ul.unim.responsive li i {background-position:0 -16px}
+		html ul.unim.responsive li.opened > a > i {background-position:0 -32px}		
+	/* sub-menus */
+	ul.unim.responsive li.parent > ul {position:absolute;*left:0;*right:0;display:none;min-width:100%}
+		ul.unim.responsive li li.parent {position:relative}
+		ul.unim.responsive li li {width:100%}
+			ul.unim.responsive li li a {text-align:start}
+				ul.unim.responsive li li ul {position:absolute;top:0}
+				html[dir="ltr"] ul.unim.responsive li li ul {left:100%}
+				html[dir="rtl"] ul.unim.responsive li li ul {right:100%}
+	/* icon */
+	.unim-icon.responsive.mobile {display:block !important;line-height:30px;padding:0 .8em}
+		.unim-icon.responsive.mobile > * {display:inline-block;vertical-align:top}
+			.unim-icon.responsive.mobile span {font-size:2.3em;line-height:.8em}
+	/* mobile */				
+	ul.unim.responsive.mobile li.parent > ul {min-width:0 !important}
+	html ul.unim.responsive.mobile li {float:none !important;width:auto !important}
+	ul.unim.responsive.mobile li i {background-image:url(arrows-vertical.png)}
+	ul.unim.responsive.mobile li a {border-top:1px solid #ccc;padding:.5em 1em}
+		ul.unim.responsive.mobile li ul {position:static !important}
+		html[dir="ltr"] ul.unim.responsive.mobile li.parent ul {margin-left:1em}
+		html[dir="rtl"] ul.unim.responsive.mobile li.parent ul {margin-right:1em}
